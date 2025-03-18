@@ -14,7 +14,6 @@ import {
   import Swal from 'sweetalert';
   import axios from 'axios';
   import './Login.css';
-import { getLineLoginUrl } from '../../utils/lineAuth';
   
   const Login: React.FC = () => {
     const [email, setEmail] = useState<string>('');
@@ -23,14 +22,11 @@ import { getLineLoginUrl } from '../../utils/lineAuth';
     
     useEffect(() => {
       const userSession = localStorage.getItem('userSession');
-      const token = localStorage.getItem('line_access_token');
-      if (userSession || token) {
+      if (userSession) {
         history.push('/home');
-      }
-       else {
+      } else {
         history.push('/login');
-    }
-
+      }
     }, [history]);
     
   const handleLogin = async () => {
@@ -49,8 +45,8 @@ import { getLineLoginUrl } from '../../utils/lineAuth';
       if (response.status === 200) {
         localStorage.setItem('userSession', JSON.stringify({ username: appUsername })); // Save username or other data
         Swal({
-          title: 'เข้าสู่ระบบสำเร็จ',
-          text: 'คุณเข้าสู่ระบบเรียบร้อยแล้ว!',
+          title: 'เข้าระบบสำเร็จ',
+          text: 'เข้าระบบแล้ว!',
           icon: 'success',
         }).then(() => {
           history.replace('/home'); // Navigate to home page
@@ -62,33 +58,17 @@ import { getLineLoginUrl } from '../../utils/lineAuth';
       // Handle login failure
       console.error("Login error:", error);
       Swal({
-        title: 'เข้าสู่ระบบล้มเหลว',
-        text: 'อีเมลหรือรหัสผ่านไม่ถูกต้อง!',
+        title: 'เข้าระบบล้มเหลว',
+        text: 'ผ่านไม่ได้!',
         icon: 'error',
       });
-    }
-  };
-
-  const handleLineLogin = () => {
-    // Add your LINE login logic here
-    try {
-      const loginUrl = getLineLoginUrl();
-      window.location.href = loginUrl; // Redirect to LINE login
-    } catch (err) {
-      // Handle login failure
-      Swal({
-        title: 'เข้าสู่ระบบล้มเหลว',
-        text: 'Please check environment configuration!',
-        icon: 'error',
-      });
-      console.error('LINE login error:', err);
     }
   };
 
   const handleGuestLogin = () => {
     Swal({
-      title: 'เข้าสู่ระบบสำเร็จ',
-      text: 'คุณเข้าสู่ระบบเรียบร้อยแล้ว!',
+      title: 'เข้าระบบสำเร็จ',
+      text: 'เข้าระบบแล้ว!',
       icon: 'success',
     }).then(() => {
       localStorage.setItem('userSession', 'guest'); // Set session for guest
@@ -147,20 +127,6 @@ import { getLineLoginUrl } from '../../utils/lineAuth';
                   onClick={handleLogin}
                 >
                   SIGN IN
-                </IonButton>
-              </IonCol>
-            </IonRow>
-             {/* LINE Login Button */}
-             <IonRow>
-              <IonCol>
-                <IonButton
-                  expand="block"
-                  color="success"
-                  className="line-login-button"
-                  onClick={handleLineLogin}
-                >
-                  <IonImg src="/icon/line.png" style={{ width: '20px', marginRight: '8px' }} />
-                  LINE
                 </IonButton>
               </IonCol>
             </IonRow>

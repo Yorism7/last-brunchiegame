@@ -46,23 +46,19 @@ import RiffleShuffle from './components/RiffleShuffle/RiffleShuffle';
 setupIonicReact();
 
 const App: React.FC = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null); // Check session state
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
 
   useEffect(() => {
-    // Check for LINE token in local storage
-    const token = localStorage.getItem('line_access_token');
-    // Check for Basic token in local storage
     const userSession = localStorage.getItem('userSession');
-    if (token || userSession) {
-      setIsAuthenticated(true); // User is authenticated
+    if (userSession) {
+      setIsAuthenticated(true);
     } else {
-      setIsAuthenticated(false); // User is not authenticated
+      setIsAuthenticated(false);
     }
   }, []);
 
-  // Show a loading state while checking authentication
   if (isAuthenticated === null) {
-    return null; // or a loading spinner/component
+    return null;
   }
   return (
     <IonApp>
