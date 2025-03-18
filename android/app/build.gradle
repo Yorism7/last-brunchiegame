@@ -18,10 +18,10 @@ android {
     }
     signingConfigs {
         release {
-            storeFile file("../keystore.jks")
-            storePassword System.getenv("KEYSTORE_PASSWORD")
-            keyAlias System.getenv("KEY_ALIAS")
-            keyPassword System.getenv("KEY_PASSWORD")
+            storeFile file("E:/JOB-DMG/GAME/key/key.jks")
+            storePassword "yoyo25252525"    // แก้ตรงนี้
+            keyAlias "breaktheice"                    // แก้ตรงนี้
+            keyPassword "yoyo25252525"          // แก้ตรงนี้
         }
     }
     buildTypes {
@@ -61,4 +61,6 @@ try {
 } catch(Exception e) {
     logger.info("google-services.json not found, google-services plugin not applied. Push Notifications won't work")
 }
+
+
 
