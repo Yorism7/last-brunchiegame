@@ -60,7 +60,7 @@ const Home: React.FC = () => {
     if (overlay) {
       overlay.onclick = (e) => {
         if (e.target === overlay) {
-          swal.close();
+          (swal as any).close();
         }
       };
     }
@@ -68,22 +68,22 @@ const Home: React.FC = () => {
 
   const showQuestionList = () => {
     showCustomAlert("รายการคำถาม", [
-      "หมวดหมู่ที่ 1 : สุ่ม",
-      "หมวดหมู่ที่ 2 : การงานการเงิน",
-      "หมวดหมู่ที่ 3 : หมวดความสัมพันธ์",
-      "หมวดหมู่ที่ 4 : หมวดทั่วไป",
-      "หมวดหมู่ที่ 5 : หมวดความรัก",
-      "หมวดหมู่ที่ 6 : หมวด 18+",
+      "หมวดี่ 1 :  ่ม",
+      "หมวดี่ 2 : การงาน",
+      "หมวดี่ 3 : หมวดความ",
+      "หมวดี่ 4 : หมวดวไป",
+      "หมวดี่ 5 : หมวด",
+      "หมวดี่ 6 : หมวด 18+",
     ]);
   };
 
   const showHowToPlay = () => {
-    showCustomAlert("วิธีการเล่น", [
-      "เลือกหมวดหมู่คำถามที่คุณสนใจ",
-      "อ่านคำถามและคิดคำตอบ",
-      "เลือกคำตอบที่คุณคิดว่าถูกต้อง",
+    showCustomAlert("เล่น", [
+      "เลือกคำถามที่สนใจ",
+      "อ่านคำถามและคำตอบ",
+      "ตอบคำถามที่ต้อง",
       "ตอบคำถามข้อถัดไป",
-      "เล่นต่อไปเพื่อปลดล็อกระดับใหม่ๆ",
+      "เล่นต่อไปเพื่อปลดล็อกระใหม่ๆ",
     ]);
   };
 
@@ -109,12 +109,12 @@ const Home: React.FC = () => {
           <IonRow style={{ padding: '4em 0' }}>
             <IonCol>
               <IonButton expand='block' color="light" shape='round' fill='outline' onClick={showQuestionList}>
-                <b>ดูหมวดหมู่คำถาม</b>
+                <b>หมวดี่คำถาม</b>
               </IonButton>
             </IonCol>
             <IonCol>
               <IonButton expand='block' color="light" shape='round' fill='outline' onClick={showHowToPlay}>
-                <b>วิธีการเล่น</b>
+                <b>เล่น</b>
               </IonButton>
             </IonCol>
           </IonRow>

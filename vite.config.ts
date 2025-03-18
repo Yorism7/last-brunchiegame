@@ -5,6 +5,17 @@ import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  build: {
+    chunkSizeWarningLimit: 1000, // เล่มขีดเป็น 1000kb
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', '@ionic/react'],
+          routing: ['react-router', 'react-router-dom', '@ionic/react-router'],
+        }
+      }
+    }
+  },
   plugins: [
     react(),
     legacy(),

@@ -1,5 +1,5 @@
 {
-  "name": "brunchiegame",
+  "name": "breaktheicequiz",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -47,6 +47,8 @@
     "eslint": "^8.35.0",
     "eslint-plugin-react": "7.35.0",
     "jsdom": "^22.1.0",
+    "sharp": "^0.33.5",
+    "svgo": "^3.3.2",
     "terser": "5.31.6",
     "typescript": "5.5.4",
     "vite": "^5.4.10",

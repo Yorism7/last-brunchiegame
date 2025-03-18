@@ -1,6 +1,8 @@
 {
-  "short_name": "Ionic App",
-  "name": "My Ionic App",
+  "short_name": "Break the ice",
+  "name": "Break the ice quiz",
+  "description": "Fun social party quiz game to break the ice and get to know each other better",
+  "version": "1.0.0",
   "icons": [
     {
       "src": "assets/icon/favicon.png",
@@ -17,5 +19,7 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#ffffff",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "content_rating": "12+",
+  "categories": ["Games", "Social", "Entertainment", "Quiz"]
 }

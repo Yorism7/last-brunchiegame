@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'ionic.brunchiegame',
-  appName: 'brunchiegame',
+  appId: 'com.breaktheice.quiz',
+  appName: 'Break the ice quiz',
   webDir: 'dist'
 };
 
