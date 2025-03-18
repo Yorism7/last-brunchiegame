@@ -42,6 +42,8 @@ import Register from './pages/Register/Register';
 import RandomCard from './pages/RandomCard/RandomCard';
 import Callback from './pages/Callback/Callback';
 import RiffleShuffle from './components/RiffleShuffle/RiffleShuffle';
+import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService/TermsOfService';
 
 setupIonicReact();
 
@@ -97,6 +99,8 @@ const App: React.FC = () => {
           <Route exact path="/">
             <Redirect to="/login" />
           </Route>
+          <Route path="/privacy-policy" component={PrivacyPolicy} exact />
+          <Route path="/terms-of-service" component={TermsOfService} exact />
         </IonRouterOutlet>
       </IonReactRouter>
     </IonApp>

@@ -22,8 +22,8 @@
   "background_color": "#ffffff",
   "content_rating": "12+",
   "categories": ["Games", "Social", "Entertainment", "Quiz"],
-  "privacy_policy_url": "https://www.brunchtime.co.th/privacy-policy-2",
-  "terms_of_service_url": "https://www.brunchtime.co.th/terms-of-service",
+  "privacy_policy_url": "/privacy-policy",
+  "terms_of_service_url": "/terms-of-service",
   "permissions": [
     "storage"
   ],
