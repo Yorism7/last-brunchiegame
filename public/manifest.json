@@ -1,7 +1,7 @@
 {
   "short_name": "Break the ice",
   "name": "Break the ice quiz",
-  "description": "Fun social party quiz game to break the ice and get to know each other better",
+  "description": "เกมตอบคำถามสร้างความรู้สึก",
   "version": "1.0.0",
   "icons": [
     {
@@ -21,12 +21,10 @@
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
   "content_rating": "12+",
-  "categories": ["Games", "Social", "Entertainment", "Quiz"],
+  "categories": ["Games", "Social"],
   "privacy_policy_url": "/privacy-policy",
   "terms_of_service_url": "/terms-of-service",
   "permissions": [
     "storage"
-  ],
-  "related_applications": [],
-  "prefer_related_applications": false
+  ]
 }
